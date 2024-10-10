@@ -16,5 +16,16 @@ public class KKHPrintResult {
         System.out.println("=================================================");
     }
 
-//    public void printErrorMessage(String errorCode);
+
+    public void printErrorMessage(String errorCode);
+
+    public void printErrorMessage(String errorCode) {
+        String errorMessage = "";
+
+        switch (errorCode) {
+            case "memberList" :
+                errorCode = "메뉴 "
+        }
+    }
+
 }
