@@ -9,13 +9,12 @@ import java.util.Scanner;
 public class KYWEmployeeView {
 
     public void kywEmployee () {
-        KYWPrintResult kywPrintResult = new KYWPrintResult();
 
+        Scanner sc = new Scanner(System.in);
         KYWMenuController kywMenuController = new KYWMenuController();
 
         do {
 
-            Scanner sc = new Scanner(System.in);
             System.out.println("=============== 직원 관리 프로그램 ===============");
             System.out.println("1. 직원 전체 조회");
             System.out.println("2. 직원 이름 조회");
@@ -31,18 +30,18 @@ public class KYWEmployeeView {
                 case 1:
                     kywMenuController.selectAllEmployee();
                     break;
-//                case 2:
-//                    menuController.selectMenuByCode(inputMenuCode());
-//                    break;
-//                case 3:
-//                    menuController.insertNewMenu(inputMenu());
-//                    break;
-//                case 4:
-//                    menuController.modifyMenu(inputModifyMenu());
-//                    break;
-//                case 5:
-//                    menuController.deleteMenu(inputDelete());
-//                    break;
+                case 2:
+                    menuController.selectMenuByCode(inputMenuCode());
+                    break;
+                case 3:
+                    menuController.insertNewMenu(inputMenu());
+                    break;
+                case 4:
+                    menuController.modifyMenu(inputModifyMenu());
+                    break;
+                case 5:
+                    menuController.deleteMenu(inputDelete());
+                    break;
 
             }
 

@@ -16,6 +16,9 @@ public class KKHPrintResult {
         System.out.println("=================================================");
     }
 
+
+    public void printErrorMessage(String errorCode);
+
     public void printErrorMessage(String errorCode) {
         String errorMessage = "";
 
@@ -25,4 +28,5 @@ public class KKHPrintResult {
                 break;
         }
     }
+
 }

@@ -1,6 +1,7 @@
 package model.service;
 
 import model.dao.KKHMenuMapper;
+import model.dao.KYWMenuMapper;
 import model.dto.EmployeeDTO;
 import org.apache.ibatis.session.SqlSession;
 
@@ -10,18 +11,22 @@ import static common.Template.getSqlSession;
 
 public class KYWEmployeeService {
 
-    private KKHMenuMapper kkhMenuMapper;
+    private KYWMenuMapper kywMenuMapper;
 
     public List<EmployeeDTO> selectAllEmployee() {
 
         SqlSession sqlSession = getSqlSession();
 
-        kkhMenuMapper = sqlSession.getMapper(KKHMenuMapper.class);
+        kywMenuMapper = sqlSession.getMapper(KYWMenuMapper.class);
 
-        List<EmployeeDTO> memberDTO = kkhMenuMapper.selectAllEmployee();
+        List<EmployeeDTO> memberDTO = kywMenuMapper.selectAllEmployee();
 
         sqlSession.close();
 
         return memberDTO;
+
+
+
     }
+
 }
