@@ -7,7 +7,9 @@ public class Member {
     public void selectMember() {
 
         Scanner sc = new Scanner(System.in);
-
+        KKHEmployeeView kkhEmployeeView = new KKHEmployeeView();
+        JEMEmployeeView jemEmployeeView = new JEMEmployeeView();
+        KYWEmployeeView kywEmployeeView = new KYWEmployeeView();
 
         do {
             System.out.println("============= 멤버 선택 ==============");
@@ -20,13 +22,13 @@ public class Member {
 
             switch (no) {
                 case 1:
-                    KKHEmployeeView.kkhEmployee();
+                    kkhEmployeeView.kkhEmployee();
                     break;
                 case 2:
-                    JEMEmployeeView.jemEmployee();
+                    jemEmployeeView.jemEmployee();
                     break;
                 case 3:
-                    KYWEmployeeView.kywEmployee();
+                    kywEmployeeView.kywEmployee();
                     break;
             }
 
