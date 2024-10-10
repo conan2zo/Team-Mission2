@@ -17,16 +17,15 @@ public class KKHPrintResult {
     }
 
 
-    public void printErrorMessage(String errorCode);
-
     public void printErrorMessage(String errorCode) {
+
         String errorMessage = "";
 
         switch (errorCode) {
+
             case "memberList" :
-                errorCode = "메뉴 전체 조회에 실패하였습니다.";
+                errorMessage = "메뉴 전체 조회에 실패하였습니다.";
                 break;
         }
     }
-
 }
