@@ -9,13 +9,12 @@ import java.util.Scanner;
 public class KYWEmployeeView {
 
     public void kywEmployee () {
-        KYWPrintResult kywPrintResult = new KYWPrintResult();
 
+        Scanner sc = new Scanner(System.in);
         KYWMenuController kywMenuController = new KYWMenuController();
 
         do {
 
-            Scanner sc = new Scanner(System.in);
             System.out.println("=============== 직원 관리 프로그램 ===============");
             System.out.println("1. 직원 전체 조회");
             System.out.println("2. 직원 이름 조회");
