@@ -1,14 +1,16 @@
 package view;
 
+import model.dto.EmployeeDTO;
+
 import java.util.List;
 
 public class KYWPrintResult {
 
-    public void printMenuList(List<MenuDTO> menuList) {
+    public void printMemberList(List<EmployeeDTO> employeeList) {
 
         System.out.println("요청하신 전체 메뉴 조회 결과 입니다.");
 
-        for (MenuDTO menu : menuList) {
+        for (EmployeeDTO menu : employeeList) {
             System.out.println(menu);
         }
 
@@ -27,4 +29,5 @@ public class KYWPrintResult {
         System.out.println(errorMessage);
 
     }
+
 }

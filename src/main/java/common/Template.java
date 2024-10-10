@@ -14,7 +14,7 @@ import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 public class Template {
 
     private static String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static String URL = "jdbc:mysql://localhost/menudb";
+    private static String URL = "jdbc:mysql://localhost/employee";
     private static String USER = "ohgiraffers";
     private static String PASSWORD = "ohgiraffers";
 

@@ -27,7 +27,7 @@ public class KYWMenuController {
 
         // 정상 조회
         if (employeeList != null) {
-            kywPrintResult.printErrorMessage(employeeList);
+            kywPrintResult.printMemberList(employeeList);
         } else {
             kywPrintResult.printErrorMessage("selectList");
         }
