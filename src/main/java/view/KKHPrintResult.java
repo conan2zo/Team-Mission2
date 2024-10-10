@@ -24,7 +24,8 @@ public class KKHPrintResult {
 
         switch (errorCode) {
             case "memberList" :
-                errorCode = "메뉴 "
+                errorCode = "메뉴 전체 조회에 실패하였습니다.";
+                break;
         }
     }
 

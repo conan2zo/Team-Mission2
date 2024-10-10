@@ -29,7 +29,7 @@ public class KYWPrintResult {
         String errorMessage = "";
 
         switch (errorCode) {
-            case "selectList" :
+            case "employeeList" :
                 errorMessage = "직원 전체 조회에 실패하셨습니다...";
                 break;
         }

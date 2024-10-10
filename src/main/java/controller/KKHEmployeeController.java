@@ -21,9 +21,14 @@ public class KKHEmployeeController {
         List<EmployeeDTO> memberDTO = kkhEmployeeService.selectAllEmployee();
 
         if(memberDTO != null) {
-//            KKHPrintResult.printEmployeeList(memberDTO);
+
+            kkhPrintResult.printEmployeeList(memberDTO);
         } else {
-//            KKHPrintResult.printErrorMessage("");
+            kkhPrintResult.printErrorMessage("employeeList");
+          
+            KKHPrintResult.printEmployeeList(memberDTO);
+        } else {
+            KKHPrintResult.printErrorMessage("");
         }
 
     }
