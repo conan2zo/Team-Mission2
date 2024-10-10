@@ -30,18 +30,18 @@ public class KYWEmployeeView {
                 case 1:
                     kywMenuController.selectAllEmployee();
                     break;
-                case 2:
-                    menuController.selectMenuByCode(inputMenuCode());
-                    break;
-                case 3:
-                    menuController.insertNewMenu(inputMenu());
-                    break;
-                case 4:
-                    menuController.modifyMenu(inputModifyMenu());
-                    break;
-                case 5:
-                    menuController.deleteMenu(inputDelete());
-                    break;
+//                case 2:
+//                    menuController.selectMenuByCode(inputMenuCode());
+//                    break;
+//                case 3:
+//                    menuController.insertNewMenu(inputMenu());
+//                    break;
+//                case 4:
+//                    menuController.modifyMenu(inputModifyMenu());
+//                    break;
+//                case 5:
+//                    menuController.deleteMenu(inputDelete());
+//                    break;
 
             }
 
