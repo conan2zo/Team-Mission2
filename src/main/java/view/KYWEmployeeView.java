@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class KYWEmployeeView {
 
-    public static void kywEmployee () {
+    public void kywEmployee () {
         KYWPrintResult kywPrintResult = new KYWPrintResult();
 
         KYWMenuController kywMenuController = new KYWMenuController();
