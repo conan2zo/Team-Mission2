@@ -1,5 +1,8 @@
 package common;
 
+import model.dao.JEMMenuMapper;
+import model.dao.KKHMenuMapper;
+import model.dao.KYWMenuMapper;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
@@ -29,7 +32,9 @@ public class Template {
             Configuration configuration = new Configuration(environment);
 
             // comment. 작성한 MenuMapper 인터페이스 mapper 로 등록
-            configuration.addMapper(MenuMapper.class);
+            configuration.addMapper(JEMMenuMapper.class);
+            configuration.addMapper(KKHMenuMapper.class);
+            configuration.addMapper(KYWMenuMapper.class);
 
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
 
