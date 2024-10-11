@@ -43,4 +43,16 @@ public class JEMEmployeeController {
         } else
             jemPrintResult.printErrorMessage("selectOne");
     }
+
+    public void deleteMember(Map<String, String> parameter) {
+        String empId = parameter.get("empId");
+
+        if(jemMemberService.deleteMember(empId)){
+            jemPrintResult.printSuccessMessage("delete");
+        } else {
+            jemPrintResult.printErrorMessage("delete");
+        }
+
+
+    }
 }

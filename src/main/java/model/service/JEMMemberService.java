@@ -35,4 +35,22 @@ public class JEMMemberService {
 
         return employeeDTO;
     }
+
+    public boolean deleteMember(String empId) {
+        SqlSession sqlSession = getSqlSession();
+
+        jemMenuMapper = sqlSession.getMapper(JEMMenuMapper.class);
+
+        int result = jemMenuMapper.deleteMember(empId);
+
+        if(result > 0) {
+            sqlSession.commit();
+        } else {
+            sqlSession.rollback();
+        }
+
+        sqlSession.close();
+
+        return result > 0 ? true : false;
+    }
 }

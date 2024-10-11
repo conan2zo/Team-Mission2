@@ -39,6 +39,14 @@
         WHERE
             PHONE = #{phone}
     </select>
+
+    <delete id="deleteMember" parameterType="String">
+        DELETE
+        FROM
+            EMPLOYEE
+        WHERE
+            EMP_ID = #{empId}
+    </delete>
     
     
 </mapper>
