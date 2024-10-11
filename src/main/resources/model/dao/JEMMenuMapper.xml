@@ -30,6 +30,15 @@
         ORDER BY
             EMP_ID
     </select>
+
+    <select id="selectPhone" resultMap="memberResultMap">
+        SELECT
+            *
+        FROM
+            EMPLOYEE
+        WHERE
+            PHONE = #{phone}
+    </select>
     
     
 </mapper>

@@ -17,6 +17,13 @@ public class JEMPrintResult {
         System.out.println("================================================");
     }
 
+    public void printMember(EmployeeDTO employeeDTO) {
+        System.out.println("요청하신 핸드폰 번호 직원 정보 조회 결과입니다.");
+
+        System.out.println(employeeDTO);
+
+        System.out.println("================================================");
+    }
 
     public void printErrorMessage(String errorCode) {
 
@@ -26,6 +33,10 @@ public class JEMPrintResult {
             case "selectList" :
                 errorMessage = "전체 직원 조회하기에 실패하셨습니다...";
                 break;
+            case "selectOne" :
+                errorMessage = "핸드폰 번호로 직원 조회하기에 실패하셨습니다...";
         }
     }
+
+
 }

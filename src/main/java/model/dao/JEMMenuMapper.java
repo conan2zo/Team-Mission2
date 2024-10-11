@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface JEMMenuMapper {
     List<EmployeeDTO> selectAllMember();
+
+
+    EmployeeDTO selectPhone(String phone);
 }
