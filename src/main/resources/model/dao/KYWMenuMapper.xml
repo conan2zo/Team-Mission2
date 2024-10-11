@@ -30,6 +30,13 @@
         ORDER BY
         EMP_NAME
     </select>
-
+    <select id="selectEmployeeName" resultMap="memberResultMap">
+        SELECT
+        *
+        FROM
+        EMPLOYEE
+        WHERE
+        EMP_NAME = #{empName}
+    </select>
 
 </mapper>

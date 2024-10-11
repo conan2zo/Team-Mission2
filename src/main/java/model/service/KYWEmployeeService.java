@@ -24,9 +24,20 @@ public class KYWEmployeeService {
         sqlSession.close();
 
         return memberDTO;
-
-
-
+        
     }
 
+    public EmployeeDTO selectEmployeeName(EmployeeDTO name) {
+
+        SqlSession sqlSession = getSqlSession();
+
+        kywMenuMapper = sqlSession.getMapper(KYWMenuMapper.class);
+
+        EmployeeDTO memberDTO = kywMenuMapper.selectEmployeeName(name);
+
+        sqlSession.close();
+
+        return memberDTO;
+
+    }
 }
