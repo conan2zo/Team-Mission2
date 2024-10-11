@@ -5,6 +5,7 @@ import model.service.KKHEmployeeService;
 import view.KKHPrintResult;
 
 import java.util.List;
+import java.util.Map;
 
 public class KKHEmployeeController {
 
@@ -25,5 +26,19 @@ public class KKHEmployeeController {
         } else {
             kkhPrintResult.printErrorMessage("employeeList");
         }
+    }
+
+    public void selectEmployeeByCode(Map<String, String> parameter) {
+
+        int menuCode = Integer.parseInt(parameter.get("empId"));
+
+        EmployeeDTO memberDTO = KKHEmployeeService.selectEmployeeByCode(menuCode);
+
+        if (memberDTO != null) {
+            KKHPrintResult.printEmployeeByCode(memberDTO);
+        } else {
+            KKHPrintResult.printErrorMessage("member");
+        }
+
     }
 }

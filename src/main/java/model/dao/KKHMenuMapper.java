@@ -7,4 +7,5 @@ import java.util.List;
 public interface KKHMenuMapper {
     List<EmployeeDTO> selectAllEmployee();
 
+    EmployeeDTO selectEmployeeByCode(int menuCode);
 }
