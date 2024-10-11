@@ -8,4 +8,6 @@ public interface KKHMenuMapper {
     List<EmployeeDTO> selectAllEmployee();
 
     EmployeeDTO selectEmployeeByCode(int menuCode);
+
+    int insertEmployee(EmployeeDTO employeeDTO);
 }
