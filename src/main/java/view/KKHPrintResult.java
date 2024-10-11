@@ -6,6 +6,16 @@ import java.util.List;
 
 public class KKHPrintResult {
 
+    public static void printEmployeeByCode(EmployeeDTO memberDTO) {
+
+        System.out.println("코드로 조회한 직원 조회입니다.");
+
+        System.out.println(memberDTO.getEmpId() + "사원 조회 결과 입니다.");
+        System.out.println(memberDTO);
+        System.out.println("=============================================");
+
+    }
+
     public void printEmployeeList(List<EmployeeDTO> memberDTO) {
         System.out.println("요청하신 전체 직원 조회입니다.");
 
@@ -17,15 +27,17 @@ public class KKHPrintResult {
     }
 
 
-    public void printErrorMessage(String errorCode) {
+    public static void printErrorMessage(String errorCode) {
 
         String errorMessage = "";
 
         switch (errorCode) {
 
             case "memberList" :
-                errorMessage = "메뉴 전체 조회에 실패하였습니다.";
+                errorMessage = "직원 전체 조회에 실패하였습니다.";
                 break;
+            case "member" :
+                errorMessage = "직원 조회에 실패하였습니다.";
         }
     }
 }

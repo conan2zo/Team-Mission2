@@ -12,6 +12,18 @@ public class KKHEmployeeService {
 
     private KKHMenuMapper kkhMemberMapper;
 
+    public static EmployeeDTO selectEmployeeByCode(int menuCode) {
+        SqlSession sqlSession = getSqlSession();
+
+        KKHMenuMapper kkhMenuMapper = sqlSession.getMapper(model.dao.KKHMenuMapper.class);
+
+        EmployeeDTO memberDTO = kkhMenuMapper.selectEmployeeByCode(menuCode);
+
+        sqlSession.close();
+
+        return memberDTO;
+    }
+
     public List<EmployeeDTO> selectAllEmployee() {
         SqlSession sqlSession = getSqlSession();
 

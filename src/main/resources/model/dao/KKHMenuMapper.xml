@@ -30,4 +30,13 @@
         ORDER BY
             EMP_NAME
     </select>
+
+    <select id="selectEmployeeByCode" resultMap="memberResultMap">
+        SELECT
+            *
+        FROM
+            EMPLOYEE
+        WHERE
+        EMP_ID = #{menuCode}
+    </select>
 </mapper>
