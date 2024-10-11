@@ -39,4 +39,12 @@
         WHERE
         EMP_ID = #{menuCode}
     </select>
+
+    <insert id="insertEmployee" parameterType="model.dto.EmployeeDTO">
+        INSERT TO
+        EMPLOYEE
+        (empId, empName, empNo, email, phone, deptCode, jobCode, salLevel, salary, bonus, managerId, hireDate, entDate, entYn)
+        VALUES
+        ( #{empId}, #{empName}, #{empNo}, #{email}, #{phone}, #{deptCode}, #{jobCode}, #{salLevel}, #{salary}, #{bonus}, #{managerId}, #{hireDate}, #{entDate}, #{entYn} )
+    </insert>
 </mapper>
