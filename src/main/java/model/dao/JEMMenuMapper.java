@@ -9,4 +9,6 @@ public interface JEMMenuMapper {
 
 
     EmployeeDTO selectPhone(String phone);
+
+    int deleteMember(String empId);
 }

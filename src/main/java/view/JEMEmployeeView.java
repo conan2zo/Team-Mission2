@@ -38,14 +38,17 @@ public class JEMEmployeeView {
 //                case 4 :
 //                    jemEmployeeController.modifyMember(inputModifyMember());
 //                    break;
-//                case 5 :
-//                    jemEmployeeController.deleteMember(inputDeleteMember());
+                case 5 :
+                    jemEmployeeController.deleteMember(inputDeleteMember());
             }
 
         }while (true);
 
     }
-//
+
+
+
+    //2번
     private static Map<String, String> inputPhone() {
         Scanner sc = new Scanner(System.in);
         System.out.print("조회 할 핸드폰 번호를 입력해주세요 : ");
@@ -56,6 +59,19 @@ public class JEMEmployeeView {
 
         return parameter;
     }
+
+    //5번
+    private static Map<String, String> inputDeleteMember() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("삭제 할 사원 번호를 입력하세요 : ");
+        String empId = sc.nextLine();
+
+        Map<String, String> parameter = new HashMap<>();
+        parameter.put("empId", empId);
+
+        return parameter;
+    }
+
 
 
 }
