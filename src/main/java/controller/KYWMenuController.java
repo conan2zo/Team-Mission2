@@ -5,6 +5,7 @@ import model.service.KYWEmployeeService;
 import view.KYWPrintResult;
 
 import java.util.List;
+import java.util.Map;
 
 public class KYWMenuController {
 
@@ -26,14 +27,28 @@ public class KYWMenuController {
         List<EmployeeDTO> employeeList = kywEmployeeService.selectAllEmployee();
 
         // 정상 조회
-        if (employeeList != null) {
-            kywPrintResult.printMemberList(employeeList);
-        } else {
-            kywPrintResult.printErrorMessage("selectList");
+            if (employeeList != null) {
+                kywPrintResult.printMemberList(employeeList);
+            } else {
+                kywPrintResult.printErrorMessage("selectList");
         }
 
     }
 
+    public void selectNameEmployee(Map<String, String> paramether) {
 
+        String name = paramether.get("name");
 
+        EmployeeDTO employeeDTO = new EmployeeDTO();
+        employeeDTO.setEmpName(name);
+
+        EmployeeDTO employeeName = kywEmployeeService.selectEmployeeName(employeeDTO);
+
+        if (employeeName != null) {
+            kywPrintResult.printMemberName(employeeName);
+        } else {
+            kywPrintResult.printErrorMessage("selectNameList");
+        }
+
+    }
 }
