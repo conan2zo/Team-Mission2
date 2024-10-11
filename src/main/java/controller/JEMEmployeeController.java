@@ -2,9 +2,13 @@ package controller;
 
 import model.dto.EmployeeDTO;
 import model.service.JEMMemberService;
+import org.apache.ibatis.session.SqlSession;
 import view.JEMPrintResult;
 
 import java.util.List;
+import java.util.Map;
+
+import static common.Template.getSqlSession;
 
 public class JEMEmployeeController {
 
@@ -26,5 +30,17 @@ public class JEMEmployeeController {
             jemPrintResult.printErrorMessage("selectList");
         }
 
+    }
+
+    public void selectPhone(Map<String, String> parameter) {
+
+        String phone = parameter.get("phone");
+
+        EmployeeDTO employeeDTO = jemMemberService.selectPhone(phone);
+
+        if(employeeDTO != null) {
+            jemPrintResult.printMember(employeeDTO);
+        } else
+            jemPrintResult.printErrorMessage("selectOne");
     }
 }

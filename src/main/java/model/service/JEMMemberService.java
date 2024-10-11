@@ -23,4 +23,16 @@ public class JEMMemberService {
 
         return memberList;
     }
+
+    public EmployeeDTO selectPhone(String phone) {
+        SqlSession sqlSession = getSqlSession();
+
+        jemMenuMapper = sqlSession.getMapper(JEMMenuMapper.class);
+
+        EmployeeDTO employeeDTO = jemMenuMapper.selectPhone(phone);
+
+        sqlSession.close();
+
+        return employeeDTO;
+    }
 }

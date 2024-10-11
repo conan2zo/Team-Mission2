@@ -2,6 +2,8 @@ package view;
 
 import controller.JEMEmployeeController;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class JEMEmployeeView {
@@ -27,9 +29,9 @@ public class JEMEmployeeView {
                 case 1 :
                     jemEmployeeController.selectAllMember();
                     break;
-//                case 2 :
-//                    jemEmployeeController.selectPhone(inputPhone());
-//                    break;
+                case 2 :
+                    jemEmployeeController.selectPhone(inputPhone());
+                    break;
 //                case 3 :
 //                    jemEmployeeController.insertNewMember(inputMember());
 //                    break;
@@ -42,6 +44,17 @@ public class JEMEmployeeView {
 
         }while (true);
 
+    }
+//
+    private static Map<String, String> inputPhone() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("조회 할 핸드폰 번호를 입력해주세요 : ");
+        String phone = sc.nextLine();
+
+        Map<String, String> parameter = new HashMap<>();
+        parameter.put("phone" , phone);
+
+        return parameter;
     }
 
 
