@@ -3,6 +3,7 @@ package common;
 import model.dao.JEMMenuMapper;
 import model.dao.KKHMenuMapper;
 import model.dao.KYWMenuMapper;
+import model.dao.YEJMenuMapper;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
@@ -35,6 +36,7 @@ public class Template {
             configuration.addMapper(JEMMenuMapper.class);
             configuration.addMapper(KKHMenuMapper.class);
             configuration.addMapper(KYWMenuMapper.class);
+            configuration.addMapper(YEJMenuMapper.class);
 
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
 
