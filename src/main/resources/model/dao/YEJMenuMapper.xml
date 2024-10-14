@@ -22,7 +22,7 @@
         <result property="entYn" column="ENT_YN"/>
     </resultMap>
 
-    <select id="selEmpAllList" resultMap="memberResultMap">
+    <select id="selEmpAllList" parameterType="model.dto.EmployeeDTO" resultMap="memberResultMap">
           SELECT *
             FROM EMPLOYEE
         ORDER BY EMP_ID ASC
