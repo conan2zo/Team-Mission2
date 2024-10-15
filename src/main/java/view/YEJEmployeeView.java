@@ -3,6 +3,8 @@ package view;
 import controller.YEJEmployeeController;
 
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -46,7 +48,7 @@ public class YEJEmployeeView {
                     return;
                 default:
                     System.out.println("┌───────────────────────────────────────────────────────────┐");
-                    System.out.println("│  잘못 입력하였습니다. 다시 입력해 주세요.          　　      　　　│");
+                    System.out.println("│            잘못 입력하였습니다. 다시 입력해 주세요.         　　　│");
                     System.out.println("└───────────────────────────────────────────────────────────┘");
                     System.out.println();
                     break;
@@ -58,6 +60,7 @@ public class YEJEmployeeView {
 
     private Map<String, Object> inputEmpJoinMemInfo() {
         Scanner sc = new Scanner(System.in);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         System.out.println("┌───────────────────────────────────────────────────────────┐");
         System.out.println("│     　 사원 등록을 시작합니다. 모두 입력해 주시기 바랍니다.  　    │");
@@ -88,14 +91,11 @@ public class YEJEmployeeView {
         sc.nextLine();
         System.out.print("관리자 사번 : ");
         String managerId = sc.nextLine();
-        System.out.print("입사일 : ");
-        sc.nextLine();
+        System.out.print("입사일(yyyy-MM-dd 형태로 입력) : ");
         Date hireDate = Date.valueOf(sc.nextLine());
-        System.out.println("퇴사일(예정일) : ");
-        sc.nextLine();
+        System.out.print("퇴사일(예정일)(yyyy-MM-dd 형태로 입력) : ");
         Date entDate = Date.valueOf(sc.nextLine());
-        System.out.println("퇴직여부 (Y/N) : ");
-        sc.nextLine();
+        System.out.print("퇴직여부 (Y/N) : ");
         String entYn = sc.nextLine();
 
         Map<String, Object> joinMemInfo = new HashMap<>();

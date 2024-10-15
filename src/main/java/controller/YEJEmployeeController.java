@@ -24,10 +24,10 @@ public class YEJEmployeeController {
 
         // 정상 조회
         if (empList != null) {
-            YEJPrintResult.printEmpList(empList);
+            prtRst.printEmpList(empList);
         } else {
-//            YEJPrintResult.printErrorMessage("selAllList");
-            System.out.println("에러~~~");
+            prtRst.printErrorMessage("selAllList");
+//            System.out.println("에러~~~");
         }
 
     }
@@ -49,6 +49,8 @@ public class YEJEmployeeController {
         Date entDate = Date.valueOf(joinMemInfo.get("entDate").toString());
         String entYn = joinMemInfo.get("entYn").toString();
 
+
+
         EmployeeDTO empDTO = new EmployeeDTO();
         empDTO.setEmpId(empId);
         empDTO.setEmpName(empName);
@@ -65,11 +67,11 @@ public class YEJEmployeeController {
         empDTO.setEntDate(entDate);
         empDTO.setEntYn(entYn);
 
-//        if (YEJEmployeeService.joinMemInfo(empDTO)) {
-//            YEJPrintResult.printSuccessMessage("joinMemInfo");
-//        } else {
-//            YEJPrintResult.printErrorMessage("joinMemInfo");
-//        }
+        if (yejempsrv.joinMemInfo(empDTO)) {
+            YEJPrintResult.printSuccessMessage("joinMemInfo");
+        } else {
+            prtRst.printErrorMessage("joinMemInfo");
+        }
 
     }
 }

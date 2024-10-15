@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface YEJMenuMapper {
     List<EmployeeDTO> selEmpAllList();
+    int joinMemInfo(EmployeeDTO joinEmpDTO);
 }
