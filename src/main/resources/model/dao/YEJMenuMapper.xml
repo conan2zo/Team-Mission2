@@ -28,4 +28,11 @@
         ORDER BY EMP_ID ASC
     </select>
 
+    <insert id="joinMemInfo" parameterType="model.dto.EmployeeDTO">
+        INSERT INTO EMPLOYEE
+               (EMP_ID, EMP_NAME, EMP_NO, EMAIL, PHONE, DEPT_CODE, JOB_CODE, SAL_LEVEL, SALARY, BONUS, MANAGER_ID, HIRE_DATE, ENT_DATE, ENT_YN)
+        VALUES (#{empId}, #{empName}, #{empNo}, #{email}, #{phone}, #{deptCode}, #{jobCode}, #{salLevel}, #{salary}, #{bonus}, #{managerId}, #{hireDate}, #{entDate}, #{entYn})
+    </insert>
+
+
 </mapper>
